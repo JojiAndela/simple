@@ -1,0 +1,37 @@
+/* 
+	Copyright (c) 2017-2018 Azeez Adewale <azeezadewale98@gmail.com> 
+	MIT License Copyright (c) 2018 simple 
+
+*/
+
+
+#1
+call "simple/core/String.sim" 
+call "simple/utilities/Console.sim" ? simple.utilities
+call "simple/security/Hash.sim"
+
+	string = new String("mOduLArity ")
+
+block main() {
+	println(string.toString()+" | LOWER : "+string.toLower())
+	println("UPPER : "+string.toUpper()+" | SENTENCE : "+string.toSentence())
+	println("LENGTH : "+string.length()+" | Char at 3 : "+string.charAt(3))
+	if string.isEmpty() println("The String is Empty") 
+	else println("We cool, "+string.toString()+" is not empty") end
+	if string.equals("modular") println("yea they are equal") 
+	else println("Nope They are not equal") end
+	if string.compareTo("modular") println("yea they are equal")
+	else println("Nope They are not equal") end
+	if string.startsWith("mod") println(string.toString()+", start with mod ")
+	else println(string.toString()+" does not start with mod but with 'mOd'") end
+	println("FIRST CHAR : "+string.firstChar()+" | LAST CHAR : "+string.lastChar())
+	println("LEFT : "+string.left(6)+" | RIGHT : "+string.right(3))
+	println("TRIM : >"+string.trim()+"< | COPY : "+string.copy(2))
+	if string.endsWith("rity ") println("yea it ends with 'rity '") end
+	println("LINE COUNT : "+string.lineCount()+" | SUBSTRING : "+string.subStringAt("d","a"))
+	println("REPLACE : "+string.replace("OduLA", "odula")+" | REMOVE : "+string.remove("ity "))
+	println("TYPE : "+string.getType()+" | TYPECODE : "+string.getTypeCode())
+	println("CONCAT : "+string.concat("and complexity"))
+}
+
+#all blocks in class are available as functions too
